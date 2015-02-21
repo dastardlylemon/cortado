@@ -1,10 +1,7 @@
-var gulp = require('gulp'), gutil = require('gulp-util'), uglify = require('gulp-uglify'), watch = require('gulp-watch'), concat = require('gulp-concat'), compass = require('gulp-compass'), minifyCSS = require('gulp-minify-css'), notify = require('gulp-notify'), ncp = require('ncp');
+var gulp = require('gulp'), gutil = require('gulp-util'), uglify = require('gulp-uglify'), watch = require('gulp-watch'), concat = require('gulp-concat'), sass = require('gulp-sass'), minifyCSS = require('gulp-minify-css'), notify = require('gulp-notify'), ncp = require('ncp');
 
 gulp.task('sass', function() {
-	gulp.src('./app/styles/**/*.scss').pipe(compass({
-            css: 'css',
-            sass: 'sass'
-        })).pipe(minifyCSS()).pipe(gulp.dest('./assets/styles')).pipe(notify({
+	gulp.src('./app/styles/**/*.scss').pipe(sass()).pipe(minifyCSS()).pipe(gulp.dest('./assets/styles')).pipe(notify({
       		message : "Sass files are processed!"
     	}));
 });
