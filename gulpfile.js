@@ -3,7 +3,7 @@ var gulp = require('gulp'), gutil = require('gulp-util'), uglify = require('gulp
 gulp.task('sass', function() {
 	gulp.src('./app/styles/**/*.scss').pipe(compass({
             css: 'css',
-            sass: 'sass'            
+            sass: 'sass'
         })).pipe(minifyCSS()).pipe(gulp.dest('./assets/styles')).pipe(notify({
       		message : "Sass files are processed!"
     	}));
@@ -17,7 +17,7 @@ gulp.task('bowerjs', function() {
 		'./app/bower_components/angular-hammer/angular-hammer.js',
 		'./app/bower_components/json3/lib/json3.js',
 		'./app/bower_components/modernizr/modernizr.js'];
-	
+
 	gulp.src(vendorjs,{base:'app/bower_compnents/'}).pipe(uglify()).pipe(concat('bower-vendor.min.js')).pipe(gulp.dest('./assets/js/bower/')).pipe(notify({
       message : "Bower Component JS files are now processed!"
     }));
@@ -38,8 +38,8 @@ gulp.task('angularappjs', function(){
 		'./app/scripts/models/*.js',
 		'./app/scripts/controllers/*.js']
 
-	gulp.src(angularjsapp, {base:'app/scripts/'}).pipe(concat('barmadden.min.js')).pipe(gulp.dest('./assets/js/barmadden/')).pipe(notify({
-		message:"Barmadden Angular App JS are now processed!"
+	gulp.src(angularjsapp, {base:'app/scripts/'}).pipe(concat('cortado.min.js')).pipe(gulp.dest('./assets/js/cortado/')).pipe(notify({
+		message:"Cortado Angular App JS are now processed!"
 	}));
 });
 

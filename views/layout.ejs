@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="cortadoApp">
   <head>
     <title>Cortado</title>
 
@@ -33,7 +33,7 @@
     <!--STYLES END-->
   </head>
 
-  <body>
+  <body ng-controller="mainController">
     <%- body %>
 
 
@@ -60,7 +60,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+
     <!--TEMPLATES END-->
 
 
@@ -89,6 +89,8 @@
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/bower/bower-vendor.min.js"></script>
+    <script src="/js/cortado/cortado.min.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

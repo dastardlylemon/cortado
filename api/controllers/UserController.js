@@ -5,7 +5,12 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
-module.exports = {
-	
+var UserController = {
+  index: function(req,res) {
+    return res.view({
+      description: 'This is a SailsJS / AngularJS Application'
+    });
+  }
 };
 
+module.exports = UserController;
