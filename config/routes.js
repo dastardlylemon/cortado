@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     controller: 'user'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -46,4 +46,13 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'post /user': {
+    controller: 'User',
+    action: 'create'
+  },
+
+  'post /add_job': {
+    controller: 'Job',
+    action: 'create'
+  }
 };
