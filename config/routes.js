@@ -54,5 +54,10 @@ module.exports.routes = {
   'post /add_job': {
     controller: 'Job',
     action: 'create'
+  },
+
+  'get /get_jobs/:id': {
+    controller: 'User',
+    action: 'retrieve'
   }
 };

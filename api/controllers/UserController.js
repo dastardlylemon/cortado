@@ -20,6 +20,19 @@ var UserController = {
         notice: 'Created user with name ' + usr.name
       });
     });
+  },
+
+  retrieve: function(req,res) {
+    User.findOne()
+    .where({id: req.params.id})
+    .populate('jobs')
+    .exec(function(err, user) {
+      if (err) {
+        console.log('Could not retrieve user');
+      }
+
+      return res.json(user);
+    });
   }
 };
 
