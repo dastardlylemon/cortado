@@ -1,4 +1,4 @@
-var cortado = angular.module('cortadoApp', ['ngRoute']);
+var cortado = angular.module('cortadoApp', ['ngRoute', 'ngDragDrop']);
 cortado.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
@@ -6,3 +6,5 @@ cortado.config(function ($routeProvider) {
       controller: 'mainController'
     });
 });
+
+var dragDrop = angular.module('drag-and-drop', ['ngDragDrop']);
