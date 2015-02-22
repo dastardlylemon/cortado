@@ -6,5 +6,3 @@ cortado.config(function ($routeProvider) {
       controller: 'mainController'
     });
 });
-
-var dragDrop = angular.module('drag-and-drop', ['ngDragDrop']);

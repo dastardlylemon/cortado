@@ -8,8 +8,12 @@ gulp.task('sass', function() {
 
 gulp.task('bowerjs', function() {
 	// main app js file
-	var vendorjs = ['./app/bower_components/angular/angular.js',
+	var vendorjs = ['./app/bower_components/jquery/dist/jquery.js',
+	  './app/bower_components/jquery-ui/jquery-ui.js',
+	  './app/bower_components/angular/angular.js',
 		'./app/bower_components/angular-route/angular-route.js',
+		'./app/bower_components/angular-bootstrap/ui-bootstrap.js',
+		'./app/bower_components/angular-dragdrop/src/angular-dragdrop.js',
 		'./app/bower_components/hammerjs/hammer.js',
 		'./app/bower_components/angular-hammer/angular-hammer.js',
 		'./app/bower_components/json3/lib/json3.js',
