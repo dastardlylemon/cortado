@@ -1,10 +1,5 @@
 angular.module('cortadoApp').controller('mainController', function($scope, $timeout) {
-  $scope.list1 = [];
-  $scope.list2 = [];
-  $scope.list3 = [];
-  $scope.list4 = [];
-
-  $scope.list5 = [
+  $scope.list1 = [
     { 'title': 'Item 1', 'drag': true },
     { 'title': 'Item 2', 'drag': true },
     { 'title': 'Item 3', 'drag': true },
@@ -15,6 +10,11 @@ angular.module('cortadoApp').controller('mainController', function($scope, $time
     { 'title': 'Item 8', 'drag': true }
   ];
 
+  $scope.list2 = [];
+  $scope.list3 = [];
+  $scope.list4 = [];
+
+/*
   // Limit items to be dropped in list1
   $scope.optionsList1 = {
     accept: function(dragEl) {
@@ -25,4 +25,5 @@ angular.module('cortadoApp').controller('mainController', function($scope, $time
       }
     }
   };
+  */
 });
