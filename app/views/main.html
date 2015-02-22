@@ -11,9 +11,11 @@
   <div class="">
     <div class='contentWrapper ng-cloak'>
       <div class='content'>
+        <h1>Cortado</h1>
         <div class="row-fluid">
           <ul class="thumbnails">
             <li class="span3" style='margin-left:10px;'>
+              <h3>Prospective</h3>
               <div class="thumbnail" data-drop="true" ng-model='prospectiveList' data-jqyoui-options="optionsList1" jqyoui-droppable="{multiple:true}">
                 <div class="caption">
                   <div class="btn btn-info btn-draggable" ng-repeat="item in prospectiveList" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="prospectiveList" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
@@ -21,6 +23,7 @@
               </div>
             </li>
             <li class="span3" style='margin-left:10px;'>
+              <h3>Started</h3>
               <div class="thumbnail" data-drop="true" ng-model='startedList' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=startedList])'}"  jqyoui-droppable="{multiple:true}">
                 <div class="caption">
                   <div class="btn btn-info btn-draggable" ng-repeat="item in startedList" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="startedList" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
@@ -28,6 +31,7 @@
               </div>
             </li>
             <li class="span3" style='margin-left:10px;'>
+              <h3>Interviewing</h3>
               <div class="thumbnail" data-drop="true" ng-model='interviewingList' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=interviewingList])'}"  jqyoui-droppable="{multiple:true}">
                 <div class="caption">
                   <div class="btn btn-info btn-draggable" ng-repeat="item in interviewingList" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="interviewingList" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
@@ -35,6 +39,7 @@
               </div>
             </li>
             <li class="span3" style='margin-left:10px;'>
+              <h3>Offers</h3>
               <div class="thumbnail" data-drop="true" ng-model='offerList' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=offerList])'}"  jqyoui-droppable="{multiple:true}">
                 <div class="caption">
                   <div class="btn btn-info btn-draggable" ng-repeat="item in offerList" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="offerList" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>

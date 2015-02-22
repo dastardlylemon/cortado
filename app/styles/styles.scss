@@ -1,5 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+* {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 body {
-  font-family: "Helvtica Neue", sans-serif;
+  font-family: "Lato", sans-serif;
+  background-color: #515A61;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  text-transform: lowercase;
+  font-size: 70px;
+  margin-bottom: 30px;
+  text-shadow: 0px 2px 0px #000;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -12,7 +36,7 @@ body {
 }
 
 .thumbnail {
-  height: 280px !important;
+  min-height: 280px !important;
 }
 
 .btn-droppable {
@@ -20,5 +44,12 @@ body {
 }
 
 .btn-draggable {
-  width: 160px;
+  width: 145px;
+  background-color: #8FBFB4;
+  background-image: none;
+  margin-bottom: 5px;
+}
+
+.btn-draggable:hover {
+  background-color: #E5955C;
 }
