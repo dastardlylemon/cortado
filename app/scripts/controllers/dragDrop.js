@@ -1,14 +1,3 @@
-var cortado = angular.module('cortadoApp', ['ngRoute', 'ngDragDrop']);
-cortado.config(function ($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: '/views/main.html',
-      controller: 'mainController'
-    });
-});
-
-var dragDrop = angular.module('drag-and-drop', ['ngDragDrop']);
-
 angular.module('cortadoApp').controller('oneCtrl', ['ngDragDrop'], function($scope, $timeout) {
   $scope.list1 = [];
   $scope.list2 = [];
@@ -36,8 +25,4 @@ angular.module('cortadoApp').controller('oneCtrl', ['ngDragDrop'], function($sco
       }
     }
   };
-});
-
-angular.module('cortadoApp').controller('mainController', function ($scope) {
-  $scope.message = "angular setup";
 });
