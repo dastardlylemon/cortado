@@ -13,7 +13,6 @@ gulp.task('bowerjs', function() {
 	  './app/bower_components/angular/angular.js',
 		'./app/bower_components/angular-route/angular-route.js',
 		'./app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-		'./app/bower_components/angular-bootstrap/ui-bootstrap.js',
 		'./app/bower_components/angular-dragdrop/src/angular-dragdrop.js',
 		'./app/bower_components/hammerjs/hammer.js',
 		'./app/bower_components/angular-hammer/angular-hammer.js',
