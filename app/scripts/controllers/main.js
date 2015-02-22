@@ -1,5 +1,5 @@
 angular.module('cortadoApp').controller('mainController', function($scope, $timeout) {
-  $scope.list1 = [
+  $scope.prospectiveList = [
     { 'title': 'Item 1', 'drag': true },
     { 'title': 'Item 2', 'drag': true },
     { 'title': 'Item 3', 'drag': true },
@@ -10,9 +10,9 @@ angular.module('cortadoApp').controller('mainController', function($scope, $time
     { 'title': 'Item 8', 'drag': true }
   ];
 
-  $scope.list2 = [];
-  $scope.list3 = [];
-  $scope.list4 = [];
+  $scope.startedList = [];
+  $scope.interviewingList = [];
+  $scope.offerList = [];
 
 /*
   // Limit items to be dropped in list1
