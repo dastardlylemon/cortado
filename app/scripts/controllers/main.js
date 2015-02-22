@@ -1,15 +1,5 @@
 angular.module('cortadoApp').controller('mainController', function($scope, $timeout, $http, $modal) {
-  $scope.prospectiveList = [
-    { 'title': 'Item 1', 'drag': true },
-    { 'title': 'Item 2', 'drag': true },
-    { 'title': 'Item 3', 'drag': true },
-    { 'title': 'Item 4', 'drag': true },
-    { 'title': 'Item 5', 'drag': true },
-    { 'title': 'Item 6', 'drag': true },
-    { 'title': 'Item 7', 'drag': true },
-    { 'title': 'Item 8', 'drag': true }
-  ];
-
+  $scope.prospectiveList = [];
   $scope.startedList = [];
   $scope.interviewingList = [];
   $scope.offerList = [];
@@ -26,7 +16,13 @@ angular.module('cortadoApp').controller('mainController', function($scope, $time
       }
     });
 
-    modalInstance.result.then(function () {
+    modalInstance.result.then(function (company) {
+      var newJobItem = {
+        'title' : company,
+        'drag' : true
+      };
+
+      $scope.prospectiveList.push(newJobItem);
     }, function() {
       console.log('modal dismissed');
     });
@@ -49,12 +45,9 @@ angular.module('cortadoApp').controller('mainController', function($scope, $time
 angular.module('cortadoApp').controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
   $scope.items = items;
 
-  $scope.selected = {
-    item: $scope.items
-  };
-
   $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
+    $modalInstance.close($scope.company);
+    console.log($scope.company);
   };
 
   $scope.cancel = function () {
